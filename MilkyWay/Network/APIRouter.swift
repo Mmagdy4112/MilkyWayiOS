@@ -21,25 +21,30 @@ enum APIRouter: APIConfiguration {
     var path: String {
         switch self {
         case .search :
-            return "search?q=%22%22"
+            return "search"
         }
     }
     
     // MARK: - Parameters
     var parameters: Parameters? {
         switch self {
-        default:
-            return nil
+        case .search:
+            return ["q":22]
         }
     }
     
     
     //dataRequest which sends request to given URL and convert to Decodable Object
     func dataRequest<T: Decodable>(objectType:T.Type,completion: @escaping (Result<T>) -> Void) {
-
         //create the url with NSURL
         var dataURL = URL(string: ApiConstants.ProductionServer.baseURL)!
         dataURL.appendPathComponent(path)
+
+        if let parameters = parameters , method == .GET{
+            for (key, value) in parameters {
+                dataURL =  dataURL.appending(key, value:"\(value)")
+            }
+        }
         //create the session object
         let session = URLSession.shared
 
@@ -48,7 +53,7 @@ enum APIRouter: APIConfiguration {
 
         request.httpMethod = method.rawValue
 
-        if let parameters = parameters{
+        if let parameters = parameters, method == .POST{
             request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }
         //create dataTask using the session object to send data to the server
@@ -60,6 +65,7 @@ enum APIRouter: APIConfiguration {
             }
 
             guard let data = data else {
+                ApiConstants.writeResponseToFiles(response: data)
                 completion(Result.failure(APPError.dataNotFound))
                 return
             }
@@ -76,6 +82,7 @@ enum APIRouter: APIConfiguration {
         task.resume()
     }
 }
+
 //APPError enum which shows all possible errors
 enum APPError: Error {
     case networkError(Error)
