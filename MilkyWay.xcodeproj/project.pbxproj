@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BF7EB003274E97F3003667A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB002274E97F3003667A5 /* AppDelegate.swift */; };
-		BF7EB007274E97F3003667A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB006274E97F3003667A5 /* ViewController.swift */; };
+		BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7EB006274E97F3003667A5 /* MainViewController.swift */; };
 		BF7EB00A274E97F3003667A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7EB008274E97F3003667A5 /* Main.storyboard */; };
 		BF7EB00C274E97F8003667A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF7EB00B274E97F8003667A5 /* Assets.xcassets */; };
 		BF7EB00F274E97F8003667A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7EB00D274E97F8003667A5 /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		BF7EAFFF274E97F3003667A5 /* MilkyWay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilkyWay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7EB002274E97F3003667A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF7EB006274E97F3003667A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF7EB006274E97F3003667A5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF7EB009274E97F3003667A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF7EB00B274E97F8003667A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF7EB00E274E97F8003667A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 				BF9787DF274EB63F0074D52C /* Models */,
 				BF7EB016274E9C7F003667A5 /* Network */,
 				BF7EB002274E97F3003667A5 /* AppDelegate.swift */,
-				BF7EB006274E97F3003667A5 /* ViewController.swift */,
+				BF7EB006274E97F3003667A5 /* MainViewController.swift */,
 				BF7EB008274E97F3003667A5 /* Main.storyboard */,
 				BF7EB00B274E97F8003667A5 /* Assets.xcassets */,
 				BF7EB00D274E97F8003667A5 /* LaunchScreen.storyboard */,
@@ -196,7 +196,7 @@
 				BF7EB01B274E9CE4003667A5 /* ApiConstants.swift in Sources */,
 				BF9787E9274EB6540074D52C /* MilkyData.swift in Sources */,
 				BF7EB01C274E9CE4003667A5 /* APIRouter.swift in Sources */,
-				BF7EB007274E97F3003667A5 /* ViewController.swift in Sources */,
+				BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
 				BF9787E8274EB6540074D52C /* Items.swift in Sources */,
 				BF7EB003274E97F3003667A5 /* AppDelegate.swift in Sources */,
