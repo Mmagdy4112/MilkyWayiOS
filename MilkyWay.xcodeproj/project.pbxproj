@@ -28,6 +28,8 @@
 		BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */; };
 		BFA55335274ECF3A000E2D19 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55334274ECF3A000E2D19 /* MainViewModel.swift */; };
 		BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */; };
+		BFA5533A274ED13B000E2D19 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55339274ED13B000E2D19 /* LoadingHelper.swift */; };
+		BFA5533C274ED16F000E2D19 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5533B274ED16F000E2D19 /* ColorEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		BFA55334274ECF3A000E2D19 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogHelper.swift; sourceTree = "<group>"; };
+		BFA55339274ED13B000E2D19 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
+		BFA5533B274ED16F000E2D19 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA55329274ECB87000E2D19 /* URLEx.swift */,
+				BFA5533B274ED16F000E2D19 /* ColorEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */,
+				BFA55339274ED13B000E2D19 /* LoadingHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -247,6 +253,7 @@
 				BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
 				BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */,
+				BFA5533A274ED13B000E2D19 /* LoadingHelper.swift in Sources */,
 				BFA55335274ECF3A000E2D19 /* MainViewModel.swift in Sources */,
 				BF9787E8274EB6540074D52C /* Items.swift in Sources */,
 				BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */,
@@ -254,6 +261,7 @@
 				BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */,
 				BF9787EA274EB6540074D52C /* Metadata.swift in Sources */,
 				BF9787E6274EB6540074D52C /* Collection.swift in Sources */,
+				BFA5533C274ED16F000E2D19 /* ColorEx.swift in Sources */,
 				BF9787DE274EA2CD0074D52C /* APIClient.swift in Sources */,
 				BF9787E7274EB6540074D52C /* Links.swift in Sources */,
 				BF9787EB274EB6540074D52C /* MilkyResponse.swift in Sources */,

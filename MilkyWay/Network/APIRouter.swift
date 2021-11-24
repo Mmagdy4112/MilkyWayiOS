@@ -70,7 +70,7 @@ enum APIRouter: APIConfiguration {
             }
             
             do {
-                ApiConstants.writeResponseToFiles(response: data!)
+                ApiConstants.writeResponseToFiles(response: data)
                 //create decodable object from data
                 let decodedObject = try JSONDecoder().decode(objectType.self, from: data)
                 completion(Result.success(decodedObject))
