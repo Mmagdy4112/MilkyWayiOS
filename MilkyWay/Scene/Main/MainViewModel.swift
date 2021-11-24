@@ -15,9 +15,12 @@ class MainViewModel:NSObject{
     }
     weak var coordinator: MainCoordinator?
     private var apiService = APIClient()
+    var loading = LoadingView.shared
 
     func getDataFromApi(){
+        loading.startAnimating()
         apiService.getItems{data in
+            self.loading.stopAnimatimating()
             switch data{
             case .success(let response):
                 self.milkyData = response
