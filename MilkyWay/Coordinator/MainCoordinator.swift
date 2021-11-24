@@ -20,7 +20,11 @@ class MainCoordinator: Coordinator {
 
     func start() {
         let vc = MainViewController.instantiate(storyBoard: "Main")
+        let viewmodel = MainViewModel()
+        viewmodel.coordinator = self
+        vc.mainViewModel = viewmodel
         navigationController.viewControllers = [vc]
     }
    
 }
+

@@ -26,6 +26,8 @@
 		BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5532C274ECD83000E2D19 /* Coordinator.swift */; };
 		BFA5532F274ECD9C000E2D19 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5532E274ECD9C000E2D19 /* Storyboarded.swift */; };
 		BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */; };
+		BFA55335274ECF3A000E2D19 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55334274ECF3A000E2D19 /* MainViewModel.swift */; };
+		BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		BFA5532C274ECD83000E2D19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BFA5532E274ECD9C000E2D19 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		BFA55334274ECF3A000E2D19 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +86,13 @@
 		BF7EB001274E97F3003667A5 /* MilkyWay */ = {
 			isa = PBXGroup;
 			children = (
+				BFA55336274ECFE4000E2D19 /* Helpers */,
+				BFA55332274ECF19000E2D19 /* Scene */,
 				BFA5532B274ECD75000E2D19 /* Coordinator */,
 				BFA55328274ECB68000E2D19 /* Extensions */,
 				BF9787DF274EB63F0074D52C /* Models */,
 				BF7EB016274E9C7F003667A5 /* Network */,
 				BF7EB002274E97F3003667A5 /* AppDelegate.swift */,
-				BF7EB006274E97F3003667A5 /* MainViewController.swift */,
 				BF7EB008274E97F3003667A5 /* Main.storyboard */,
 				BF7EB00B274E97F8003667A5 /* Assets.xcassets */,
 				BF7EB00D274E97F8003667A5 /* LaunchScreen.storyboard */,
@@ -136,6 +141,31 @@
 				BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		BFA55332274ECF19000E2D19 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				BFA55333274ECF28000E2D19 /* Main */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		BFA55333274ECF28000E2D19 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				BF7EB006274E97F3003667A5 /* MainViewController.swift */,
+				BFA55334274ECF3A000E2D19 /* MainViewModel.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		BFA55336274ECFE4000E2D19 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,9 +247,11 @@
 				BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
 				BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */,
+				BFA55335274ECF3A000E2D19 /* MainViewModel.swift in Sources */,
 				BF9787E8274EB6540074D52C /* Items.swift in Sources */,
 				BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */,
 				BF7EB003274E97F3003667A5 /* AppDelegate.swift in Sources */,
+				BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */,
 				BF9787EA274EB6540074D52C /* Metadata.swift in Sources */,
 				BF9787E6274EB6540074D52C /* Collection.swift in Sources */,
 				BF9787DE274EA2CD0074D52C /* APIClient.swift in Sources */,
