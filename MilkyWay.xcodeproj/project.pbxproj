@@ -19,9 +19,10 @@
 		BF9787E6274EB6540074D52C /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E0274EB6540074D52C /* Collection.swift */; };
 		BF9787E7274EB6540074D52C /* Links.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E1274EB6540074D52C /* Links.swift */; };
 		BF9787E8274EB6540074D52C /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E2274EB6540074D52C /* Items.swift */; };
-		BF9787E9274EB6540074D52C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E3274EB6540074D52C /* Data.swift */; };
+		BF9787E9274EB6540074D52C /* MilkyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E3274EB6540074D52C /* MilkyData.swift */; };
 		BF9787EA274EB6540074D52C /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E4274EB6540074D52C /* Metadata.swift */; };
 		BF9787EB274EB6540074D52C /* MilkyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E5274EB6540074D52C /* MilkyResponse.swift */; };
+		BFA5532A274ECB87000E2D19 /* URLEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55329274ECB87000E2D19 /* URLEx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,9 +40,10 @@
 		BF9787E0274EB6540074D52C /* Collection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
 		BF9787E1274EB6540074D52C /* Links.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Links.swift; sourceTree = "<group>"; };
 		BF9787E2274EB6540074D52C /* Items.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
-		BF9787E3274EB6540074D52C /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		BF9787E3274EB6540074D52C /* MilkyData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkyData.swift; sourceTree = "<group>"; };
 		BF9787E4274EB6540074D52C /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		BF9787E5274EB6540074D52C /* MilkyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkyResponse.swift; sourceTree = "<group>"; };
+		BFA55329274ECB87000E2D19 /* URLEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEx.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 		BF7EB001274E97F3003667A5 /* MilkyWay */ = {
 			isa = PBXGroup;
 			children = (
+				BFA55328274ECB68000E2D19 /* Extensions */,
 				BF9787DF274EB63F0074D52C /* Models */,
 				BF7EB016274E9C7F003667A5 /* Network */,
 				BF7EB002274E97F3003667A5 /* AppDelegate.swift */,
@@ -101,13 +104,21 @@
 			isa = PBXGroup;
 			children = (
 				BF9787E0274EB6540074D52C /* Collection.swift */,
-				BF9787E3274EB6540074D52C /* Data.swift */,
+				BF9787E3274EB6540074D52C /* MilkyData.swift */,
 				BF9787E2274EB6540074D52C /* Items.swift */,
 				BF9787E1274EB6540074D52C /* Links.swift */,
 				BF9787E4274EB6540074D52C /* Metadata.swift */,
 				BF9787E5274EB6540074D52C /* MilkyResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		BFA55328274ECB68000E2D19 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFA55329274ECB87000E2D19 /* URLEx.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +192,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA5532A274ECB87000E2D19 /* URLEx.swift in Sources */,
 				BF7EB01B274E9CE4003667A5 /* ApiConstants.swift in Sources */,
-				BF9787E9274EB6540074D52C /* Data.swift in Sources */,
+				BF9787E9274EB6540074D52C /* MilkyData.swift in Sources */,
 				BF7EB01C274E9CE4003667A5 /* APIRouter.swift in Sources */,
 				BF7EB007274E97F3003667A5 /* ViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
