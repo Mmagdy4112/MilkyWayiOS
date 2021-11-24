@@ -23,6 +23,9 @@
 		BF9787EA274EB6540074D52C /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E4274EB6540074D52C /* Metadata.swift */; };
 		BF9787EB274EB6540074D52C /* MilkyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9787E5274EB6540074D52C /* MilkyResponse.swift */; };
 		BFA5532A274ECB87000E2D19 /* URLEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55329274ECB87000E2D19 /* URLEx.swift */; };
+		BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5532C274ECD83000E2D19 /* Coordinator.swift */; };
+		BFA5532F274ECD9C000E2D19 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5532E274ECD9C000E2D19 /* Storyboarded.swift */; };
+		BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		BF9787E4274EB6540074D52C /* Metadata.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
 		BF9787E5274EB6540074D52C /* MilkyResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MilkyResponse.swift; sourceTree = "<group>"; };
 		BFA55329274ECB87000E2D19 /* URLEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLEx.swift; sourceTree = "<group>"; };
+		BFA5532C274ECD83000E2D19 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		BFA5532E274ECD9C000E2D19 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +82,7 @@
 		BF7EB001274E97F3003667A5 /* MilkyWay */ = {
 			isa = PBXGroup;
 			children = (
+				BFA5532B274ECD75000E2D19 /* Coordinator */,
 				BFA55328274ECB68000E2D19 /* Extensions */,
 				BF9787DF274EB63F0074D52C /* Models */,
 				BF7EB016274E9C7F003667A5 /* Network */,
@@ -119,6 +126,16 @@
 				BFA55329274ECB87000E2D19 /* URLEx.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BFA5532B274ECD75000E2D19 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5532C274ECD83000E2D19 /* Coordinator.swift */,
+				BFA5532E274ECD9C000E2D19 /* Storyboarded.swift */,
+				BFA55330274ECDB8000E2D19 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,11 +211,14 @@
 			files = (
 				BFA5532A274ECB87000E2D19 /* URLEx.swift in Sources */,
 				BF7EB01B274E9CE4003667A5 /* ApiConstants.swift in Sources */,
+				BFA5532F274ECD9C000E2D19 /* Storyboarded.swift in Sources */,
 				BF9787E9274EB6540074D52C /* MilkyData.swift in Sources */,
 				BF7EB01C274E9CE4003667A5 /* APIRouter.swift in Sources */,
 				BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
+				BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */,
 				BF9787E8274EB6540074D52C /* Items.swift in Sources */,
+				BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */,
 				BF7EB003274E97F3003667A5 /* AppDelegate.swift in Sources */,
 				BF9787EA274EB6540074D52C /* Metadata.swift in Sources */,
 				BF9787E6274EB6540074D52C /* Collection.swift in Sources */,

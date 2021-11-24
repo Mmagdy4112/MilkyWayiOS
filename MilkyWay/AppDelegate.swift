@@ -11,6 +11,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
+    var coordinator:Coordinator?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -19,12 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = navController
         window?.makeKeyAndVisible()
         
-
-        let storyboard = UIStoryboard(name: "Main" , bundle: Bundle.main)
-
-        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        
-        navController.viewControllers = [vc]
+        coordinator = MainCoordinator(navigationController: navController)
+        // tell the coordinator to take over control
+        coordinator?.start()
         return true
     }
 
