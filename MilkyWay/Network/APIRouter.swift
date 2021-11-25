@@ -5,7 +5,8 @@
 //  Created by Mohamed Magdy on 11/24/21.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 enum APIRouter: APIConfiguration {
     case search
@@ -35,7 +36,7 @@ enum APIRouter: APIConfiguration {
     
     
     //dataRequest which sends request to given URL and convert to Decodable Object
-    func dataRequest<T: Decodable>(objectType:T.Type,completion: @escaping (Result<T>) -> Void) {
+    func dataRequest<T: Decodable>(requestObservable:RequestObservable) -> Observable<T> {
         //create the url with NSURL
         var dataURL = URL(string: ApiConstants.ProductionServer.baseURL)!
         dataURL.appendPathComponent(path)
@@ -45,8 +46,6 @@ enum APIRouter: APIConfiguration {
                 dataURL =  dataURL.appending(key, value:"\(value)")
             }
         }
-        //create the session object
-        let session = URLSession.shared
 
         //now create the URLRequest object using the url object
         var request = URLRequest(url: dataURL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 60)
@@ -56,31 +55,9 @@ enum APIRouter: APIConfiguration {
         if let parameters = parameters, method == .POST{
             request.httpBody = try! JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }
-        //create dataTask using the session object to send data to the server
-        let task = session.dataTask(with: request, completionHandler: { data, response, error in
-
-            guard error == nil else {
-                completion(Result.failure(APPError.networkError(error!)))
-                return
-            }
-
-            guard let data = data else {
-                completion(Result.failure(APPError.dataNotFound))
-                return
-            }
-            
-            do {
-                ApiConstants.writeResponseToFiles(response: data)
-                //create decodable object from data
-                let decodedObject = try JSONDecoder().decode(objectType.self, from: data)
-                completion(Result.success(decodedObject))
-            } catch let error {
-                completion(Result.failure(APPError.jsonParsingError(error as! DecodingError)))
-            }
-        })
-
-        task.resume()
+        return requestObservable.callAPI(request: request)
     }
+    
 }
 
 //APPError enum which shows all possible errors
