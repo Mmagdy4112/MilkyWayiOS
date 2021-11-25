@@ -5,19 +5,29 @@
 //  Created by Mohamed Magdy on 11/24/21.
 //
 
-import Foundation
+import RxSwift
+import RxCocoa
 
 class APIClient{
-    
-    private func performRequest<T:Decodable>(router:APIRouter,completion:@escaping(Result<T>)->Void){
-        return router.dataRequest(objectType: T.self){result in
-            completion(result)
-        }
+    let requestObservable = RequestObservable(config: .default)
+
+    private func performRequest<T:Decodable>(router:APIRouter)->Observable<T>{
+        return router.dataRequest(requestObservable: requestObservable)
     }
     
-    func getItems(completion:@escaping(Result<MilkyResponse>)->Void){
-        performRequest(router: APIRouter.search, completion: completion)
+    func getItems() ->Observable<MilkyResponse>{
+       return performRequest(router: APIRouter.search)
     }
     
 
+}
+fileprivate extension Encodable {
+  var dictionaryValue:[String: Any?]? {
+      guard let data = try? JSONEncoder().encode(self),
+      let dictionary = try? JSONSerialization.jsonObject(with: data,
+        options: .allowFragments) as? [String: Any] else {
+      return nil
+    }
+    return dictionary
+  }
 }
