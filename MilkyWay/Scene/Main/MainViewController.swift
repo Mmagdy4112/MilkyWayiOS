@@ -26,15 +26,24 @@ class MainViewController: UIViewController,Storyboarded {
             cell.centerLabel.text = items.data?[0].center
             let urlString = (items.links?[0].href ?? "").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             cell.img.imageFromUrl(urlString!, disposeBag: self.mainViewModel.disposeBag)
-            
-
         }.disposed(by: mainViewModel.disposeBag)
         tableView.rx.modelDeleted(Items.self).bind{ item in
             
-            
         }.disposed(by: mainViewModel.disposeBag)
+        tableView.rx.modelSelected(Items.self).subscribe(onNext: {model in
+            self.mainViewModel.coordinator?.navigateToDetails(item: model)
+        }).disposed(by: mainViewModel.disposeBag)
     }
+    
 
 }
 
 
+extension Reactive where Base: UICollectionView {
+    public func modelAndIndexSelected<T>(_ modelType: T.Type) -> ControlEvent<(T, IndexPath)> {
+        ControlEvent(events: Observable.zip(
+            self.modelSelected(modelType),
+            self.itemSelected
+        ))
+    }
+}

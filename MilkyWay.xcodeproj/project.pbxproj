@@ -31,6 +31,12 @@
 		BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */; };
 		BFA5533A274ED13B000E2D19 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55339274ED13B000E2D19 /* LoadingHelper.swift */; };
 		BFA5533C274ED16F000E2D19 /* ColorEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5533B274ED16F000E2D19 /* ColorEx.swift */; };
+		BFA5533F274EF859000E2D19 /* MilkyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA5533E274EF859000E2D19 /* MilkyCell.swift */; };
+		BFA55341274F00C4000E2D19 /* StringEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55340274F00C4000E2D19 /* StringEx.swift */; };
+		BFA55345274F1CFC000E2D19 /* ImageEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA55344274F1CFB000E2D19 /* ImageEx.swift */; };
+		BFA6D216274FEA4F00C2A632 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6D215274FEA4F00C2A632 /* DetailsViewController.swift */; };
+		BFA6D218274FEA5900C2A632 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6D217274FEA5900C2A632 /* DetailsViewModel.swift */; };
+		BFA6D21A274FEB1E00C2A632 /* RequestObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA6D219274FEB1E00C2A632 /* RequestObservable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +68,12 @@
 		BFA55337274ECFF3000E2D19 /* AlertDialogHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDialogHelper.swift; sourceTree = "<group>"; };
 		BFA55339274ED13B000E2D19 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
 		BFA5533B274ED16F000E2D19 /* ColorEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorEx.swift; sourceTree = "<group>"; };
+		BFA5533E274EF859000E2D19 /* MilkyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilkyCell.swift; sourceTree = "<group>"; };
+		BFA55340274F00C4000E2D19 /* StringEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringEx.swift; sourceTree = "<group>"; };
+		BFA55344274F1CFB000E2D19 /* ImageEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEx.swift; sourceTree = "<group>"; };
+		BFA6D215274FEA4F00C2A632 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		BFA6D217274FEA5900C2A632 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		BFA6D219274FEB1E00C2A632 /* RequestObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestObservable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +94,6 @@
 				A1D0FE28C3FE690635A1A4BD /* Pods-MilkyWay.debug.xcconfig */,
 				22CFBB3C0E272F4FBF81F3AD /* Pods-MilkyWay.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -115,6 +126,7 @@
 		BF7EB001274E97F3003667A5 /* MilkyWay */ = {
 			isa = PBXGroup;
 			children = (
+				BFA5533D274EF848000E2D19 /* Cells */,
 				BFA55336274ECFE4000E2D19 /* Helpers */,
 				BFA55332274ECF19000E2D19 /* Scene */,
 				BFA5532B274ECD75000E2D19 /* Coordinator */,
@@ -137,6 +149,7 @@
 				BF7EB018274E9CE4003667A5 /* ApiConstants.swift */,
 				BF7EB019274E9CE4003667A5 /* APIRouter.swift */,
 				BF9787DD274EA2CD0074D52C /* APIClient.swift */,
+				BFA6D219274FEB1E00C2A632 /* RequestObservable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -159,6 +172,8 @@
 			children = (
 				BFA55329274ECB87000E2D19 /* URLEx.swift */,
 				BFA5533B274ED16F000E2D19 /* ColorEx.swift */,
+				BFA55340274F00C4000E2D19 /* StringEx.swift */,
+				BFA55344274F1CFB000E2D19 /* ImageEx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +191,7 @@
 		BFA55332274ECF19000E2D19 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				BFA6D214274FEA3400C2A632 /* Details */,
 				BFA55333274ECF28000E2D19 /* Main */,
 			);
 			path = Scene;
@@ -197,6 +213,23 @@
 				BFA55339274ED13B000E2D19 /* LoadingHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BFA5533D274EF848000E2D19 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BFA5533E274EF859000E2D19 /* MilkyCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BFA6D214274FEA3400C2A632 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				BFA6D215274FEA4F00C2A632 /* DetailsViewController.swift */,
+				BFA6D217274FEA5900C2A632 /* DetailsViewModel.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,15 +352,21 @@
 				BFA5532F274ECD9C000E2D19 /* Storyboarded.swift in Sources */,
 				BF9787E9274EB6540074D52C /* MilkyData.swift in Sources */,
 				BF7EB01C274E9CE4003667A5 /* APIRouter.swift in Sources */,
+				BFA55345274F1CFC000E2D19 /* ImageEx.swift in Sources */,
+				BFA55341274F00C4000E2D19 /* StringEx.swift in Sources */,
 				BF7EB007274E97F3003667A5 /* MainViewController.swift in Sources */,
 				BF7EB01A274E9CE4003667A5 /* APIConfiguration.swift in Sources */,
 				BFA5532D274ECD83000E2D19 /* Coordinator.swift in Sources */,
 				BFA5533A274ED13B000E2D19 /* LoadingHelper.swift in Sources */,
+				BFA6D216274FEA4F00C2A632 /* DetailsViewController.swift in Sources */,
+				BFA6D218274FEA5900C2A632 /* DetailsViewModel.swift in Sources */,
 				BFA55335274ECF3A000E2D19 /* MainViewModel.swift in Sources */,
 				BF9787E8274EB6540074D52C /* Items.swift in Sources */,
 				BFA55331274ECDB8000E2D19 /* MainCoordinator.swift in Sources */,
 				BF7EB003274E97F3003667A5 /* AppDelegate.swift in Sources */,
 				BFA55338274ECFF3000E2D19 /* AlertDialogHelper.swift in Sources */,
+				BFA6D21A274FEB1E00C2A632 /* RequestObservable.swift in Sources */,
+				BFA5533F274EF859000E2D19 /* MilkyCell.swift in Sources */,
 				BF9787EA274EB6540074D52C /* Metadata.swift in Sources */,
 				BF9787E6274EB6540074D52C /* Collection.swift in Sources */,
 				BFA5533C274ED16F000E2D19 /* ColorEx.swift in Sources */,

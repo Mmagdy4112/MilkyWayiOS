@@ -19,12 +19,18 @@ class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = MainViewController.instantiate(storyBoard: "Main")
+        let vc = MainViewController.instantiate()
         let viewmodel = MainViewModel()
         viewmodel.coordinator = self
         vc.mainViewModel = viewmodel
         navigationController.viewControllers = [vc]
     }
-   
+    func navigateToDetails(item:Items) {
+        let vc = DetailsViewController.instantiate(storyBoard: "Main")
+        let viewmodel =  DetailsViewModel(item: item)
+        viewmodel.coordinator = self
+        vc.detailsViewModel = viewmodel
+        navigationController.pushViewController(vc, animated: true)
+    }
 }
 
