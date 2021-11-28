@@ -20,16 +20,28 @@ class MainViewModel:NSObject{
         super.init()
         getDataFromApi()
     }
-
-
+    
+    
     func getDataFromApi(){
+        // load data from json file if exist then load service to update data
         loading.startAnimating()
-        apiService.getItems().subscribe(
+        if let items = Utils.shared.readFromJson(){
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                self.items.onNext(items)
+                self.items.onCompleted()
+                self.loading.stopAnimatimating()
+            }
+            
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            self.apiService.getItems().subscribe(
             onNext: { result in
-               //MARK: display in UITableView
+                //MARK: display in UITableView
                 if let items = result.collection?.items{
                     self.items.onNext(items)
                     self.items.onCompleted()
+                    // store data to json file
+                    Utils.shared.writeResponseToFiles(items: items)
                 }
             },
             onError: { error in
@@ -41,18 +53,7 @@ class MainViewModel:NSObject{
                 DispatchQueue.main.async {
                     self.loading.stopAnimatimating()
                 }
-            }).disposed(by: disposeBag)
-        
-//        apiService.getItems{data in
-//            self.loading.stopAnimatimating()
-//            switch data{
-//            case .success(let response):
-//                self.milkyData = response
-//                if let items = response.collection?.items {
-//                    self.items.onNext(items)
-//                }
-//            case .failure(let error):
-//            }
-//        }
+            }).disposed(by: self.disposeBag)
+        }
     }
 }

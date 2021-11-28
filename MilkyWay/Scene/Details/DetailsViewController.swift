@@ -23,9 +23,9 @@ class DetailsViewController: UIViewController,Storyboarded {
     func updateUi(){
         let item = detailsViewModel.item!
         titleLabel.text = item.data?[0].title
-        dateLabel.text = item.data?[0].date_created
+        dateLabel.text = Utils.shared.getFormattedDate(item.data?[0].date_created!) 
         centerLabel.text = item.data?[0].center
-        descTextView.text = (item.data?[0].description)! + " https://images-assets.nasa.gov/image/ARC-2002-ACD02-0056-06/ARC-2002-ACD02-0056-06~thumb.jpg"
+        descTextView.text = (item.data?[0].description)!
         let urlString = (item.links?[0].href ?? "").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         img.imageFromUrl(urlString!, disposeBag: self.detailsViewModel.disposeBag)
     }

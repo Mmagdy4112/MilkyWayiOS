@@ -22,7 +22,7 @@ class MainViewController: UIViewController,Storyboarded {
         mainViewModel.items.bind(to: tableView.rx.items(cellIdentifier: String(describing: MilkyCell.self), cellType: MilkyCell.self))
         {row,items,cell in
             cell.titleLabel.text = items.data?[0].title
-            cell.dateLabel.text = items.data?[0].date_created
+            cell.dateLabel.text = Utils.shared.getFormattedDate(items.data?[0].date_created!)
             cell.centerLabel.text = items.data?[0].center
             let urlString = (items.links?[0].href ?? "").addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
             cell.img.imageFromUrl(urlString!, disposeBag: self.mainViewModel.disposeBag)

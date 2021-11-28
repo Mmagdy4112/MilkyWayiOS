@@ -30,6 +30,7 @@ class MainCoordinator: Coordinator {
         let viewmodel =  DetailsViewModel(item: item)
         viewmodel.coordinator = self
         vc.detailsViewModel = viewmodel
+        navigationController.navigationBar.topItem?.title = "The Milky Way"
         navigationController.pushViewController(vc, animated: true)
     }
 }
