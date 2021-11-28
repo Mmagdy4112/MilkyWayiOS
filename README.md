@@ -12,6 +12,9 @@ user should be able to :
 #### MVVM :
  - is the industry-recognized software architecture pattern that overcomes all drawbacks of MVP and MVC design patterns. MVVM suggests separating the data presentation logic(Views or UI) from the core business logic part of the application.
 
-#### RXSwift , :
- - is a library for composing asynchronous and event-based code by using observable sequences and functional style operators
+#### Coordinator :
+ - The idea of the Coordinator pattern is to create a separate entity — a Coordinator — which is responsible for the application’s flow.
+
+#### RXSwift :
+ - is a library for composing asynchronous and event-based code by using observable sequences and functional style operators.
 
